@@ -1,0 +1,905 @@
+[gd_scene format=3 uid="uid://br8t8shp3sr6c"]
+
+[ext_resource type="Texture2D" uid="uid://bqifflocxuxgw" path="res://Resources/Textures/teamfortress2NoText.png" id="1_lhe6f"]
+[ext_resource type="Texture2D" uid="uid://duv2g14sj5pxo" path="res://Resources/Textures/lovense.png" id="2_o4phh"]
+[ext_resource type="Script" uid="uid://b3u50koggidhc" path="res://Core/Content/Buttons/Home/ButtonStart.cs" id="3_2enu8"]
+[ext_resource type="Script" uid="uid://dcclrt1edxqkl" path="res://Core/Content/Buttons/Main/ButtonHome.cs" id="3_62sso"]
+[ext_resource type="Script" uid="uid://dvvkfkjbkp0r5" path="res://Core/Content/Buttons/Home/ButtonStop.cs" id="4_3um8p"]
+[ext_resource type="Script" uid="uid://c3cuubrjsqhpn" path="res://Core/Content/Buttons/Main/ButtonConfig.cs" id="4_niean"]
+[ext_resource type="Script" uid="uid://7ldkk261s311" path="res://Core/Content/Buttons/Home/ButtonLoadConfig.cs" id="5_1lyj7"]
+[ext_resource type="Script" uid="uid://15c1fqsvoqq0" path="res://Core/Content/Buttons/Main/ButtonCustomization.cs" id="5_tjdmb"]
+[ext_resource type="Script" uid="uid://eakfcgp36sln" path="res://Core/Content/Buttons/Home/ButtonTestLovense.cs" id="6_1lyj7"]
+[ext_resource type="Script" uid="uid://dve1qwab63r7b" path="res://Core/Content/Console.cs" id="6_3um8p"]
+[ext_resource type="Script" uid="uid://dwow4wpgbbkl4" path="res://Core/Content/ScreenController.cs" id="6_ueq2y"]
+[ext_resource type="Script" uid="uid://c8th81dr2hiap" path="res://Core/Content/Buttons/Home/ButtonClose.cs" id="7_brcay"]
+[ext_resource type="Script" uid="uid://c7eiks41u7f0v" path="res://Core/Content/Buttons/Customization/ButtonSetSteamDisplayName.cs" id="13_xepxj"]
+[ext_resource type="Script" uid="uid://by2787j3owmys" path="res://Core/Content/Buttons/Customization/ButtonSetLovenseLocalIP.cs" id="14_lhe6f"]
+[ext_resource type="Script" uid="uid://cy5hadiwf0dsd" path="res://Core/Content/Buttons/Customization/ButtonSetLovensePort.cs" id="15_fvku6"]
+[ext_resource type="Script" uid="uid://dph01qxi6dhhl" path="res://Core/Content/Buttons/Customization/ButtonSetTeamFortress2Path.cs" id="16_lhe6f"]
+[ext_resource type="Script" uid="uid://do0d3gy7eig5f" path="res://Core/Content/Buttons/Config/ButtonDeathVibrationIntensityCritical.cs" id="17_2gewe"]
+[ext_resource type="Script" uid="uid://ctx5ekoah7dl" path="res://Core/Content/Buttons/Config/ButtonDeathVibrationIntensityNormal.cs" id="18_syr4n"]
+[ext_resource type="Script" uid="uid://bqjekjl1sm0xi" path="res://Core/Content/Buttons/Config/ButtonEchoVibrationIntensity.cs" id="19_5x875"]
+[ext_resource type="Script" uid="uid://bq780strbvpf8" path="res://Core/Content/Buttons/Config/ButtonEchoVibrationLength.cs" id="20_2xh08"]
+[ext_resource type="Script" uid="uid://cycu7of1sove0" path="res://Core/Content/Buttons/Config/ButtonKillStreakVibrationLength0.cs" id="21_0b5xl"]
+[ext_resource type="Script" uid="uid://cmplwn10fwjks" path="res://Core/Content/Buttons/Config/ButtonKillStreakVibrationLength5.cs" id="22_qm20r"]
+[ext_resource type="Script" uid="uid://cmj8dmuf07td4" path="res://Core/Content/Buttons/Config/ButtonKillStreakVibrationLength10.cs" id="23_mi0f7"]
+[ext_resource type="Script" uid="uid://bodkav4uqm7rs" path="res://Core/Content/Buttons/Config/ButtonKillStreakVibrationLength15.cs" id="24_f2fsi"]
+[ext_resource type="Script" uid="uid://4267m2csnfs0" path="res://Core/Content/Buttons/Config/ButtonKillStreakVibrationLength20.cs" id="25_v74uj"]
+[ext_resource type="Script" uid="uid://cxh83nnjg0rlq" path="res://Core/Content/Buttons/Config/ButtonKillStreakVibrationLength25.cs" id="26_3gobe"]
+[ext_resource type="Script" uid="uid://15f2q2jpumjy" path="res://Core/Content/Buttons/Config/ButtonKillVibrationIntensityCritical.cs" id="27_tfyti"]
+[ext_resource type="Script" uid="uid://hgxkapi7y03n" path="res://Core/Content/Buttons/Config/ButtonKillVibrationIntensityNormal.cs" id="28_64mo1"]
+[ext_resource type="Script" uid="uid://b8fpfjsrc5fb7" path="res://Core/Content/Buttons/Config/ButtonSuicideVibrationIntensity.cs" id="29_00c1p"]
+[ext_resource type="Script" uid="uid://bnc7biyhnhumd" path="res://Core/Content/Buttons/Config/ButtonReset.cs" id="30_syr4n"]
+
+[node name="StreamStateDefault" type="Node" unique_id=1231840922]
+
+[node name="RootControl" type="Control" parent="." unique_id=624230405]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="Backgrounds" type="Control" parent="RootControl" unique_id=1292257841]
+anchors_preset = 0
+
+[node name="TeamFortress2" type="Sprite2D" parent="RootControl/Backgrounds" unique_id=769250637]
+position = Vector2(960, 540)
+texture = ExtResource("1_lhe6f")
+
+[node name="Lovense" type="Sprite2D" parent="RootControl/Backgrounds" unique_id=56497766]
+position = Vector2(1662, 48)
+texture = ExtResource("2_o4phh")
+
+[node name="MainControls" type="Control" parent="RootControl" unique_id=264249717]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Buttons" type="Control" parent="RootControl/MainControls" unique_id=333756691]
+anchors_preset = 0
+
+[node name="Home" type="Button" parent="RootControl/MainControls/Buttons" unique_id=507757296 node_paths=PackedStringArray("ScreenController")]
+layout_mode = 0
+offset_left = 96.0
+offset_top = 40.0
+offset_right = 296.0
+offset_bottom = 100.0
+script = ExtResource("3_62sso")
+ScreenController = NodePath("../../ScreenController")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="RootControl/MainControls/Buttons/Home" unique_id=500828059]
+layout_mode = 0
+offset_right = 200.0
+offset_bottom = 60.0
+mouse_filter = 2
+bbcode_enabled = true
+text = "[b][center]HOME"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Config" type="Button" parent="RootControl/MainControls/Buttons" unique_id=310331633 node_paths=PackedStringArray("ScreenController")]
+layout_mode = 0
+offset_left = 312.0
+offset_top = 40.0
+offset_right = 512.0
+offset_bottom = 100.0
+script = ExtResource("4_niean")
+ScreenController = NodePath("../../ScreenController")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="RootControl/MainControls/Buttons/Config" unique_id=1582717166]
+layout_mode = 0
+offset_right = 200.0
+offset_bottom = 60.0
+mouse_filter = 2
+bbcode_enabled = true
+text = "[b][center]CONFIG"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Customization" type="Button" parent="RootControl/MainControls/Buttons" unique_id=1477870063 node_paths=PackedStringArray("ScreenController")]
+layout_mode = 0
+offset_left = 528.0
+offset_top = 40.0
+offset_right = 728.0
+offset_bottom = 100.0
+script = ExtResource("5_tjdmb")
+ScreenController = NodePath("../../ScreenController")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="RootControl/MainControls/Buttons/Customization" unique_id=1055176645]
+layout_mode = 0
+offset_right = 200.0
+offset_bottom = 60.0
+mouse_filter = 2
+bbcode_enabled = true
+text = "[b][center]CUSTOMIZATION"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ScreenController" type="Control" parent="RootControl/MainControls" unique_id=668132686 node_paths=PackedStringArray("PageConfig", "PageCustomization", "PageHome")]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("6_ueq2y")
+PageConfig = NodePath("../../PageConfig")
+PageCustomization = NodePath("../../PageCustomization")
+PageHome = NodePath("../../PageHome")
+
+[node name="PageHome" type="Control" parent="RootControl" unique_id=851328809]
+anchors_preset = 0
+
+[node name="Buttons" type="Control" parent="RootControl/PageHome" unique_id=433727433]
+anchors_preset = 0
+
+[node name="Start" type="Button" parent="RootControl/PageHome/Buttons" unique_id=100504221]
+layout_mode = 0
+offset_left = 96.0
+offset_top = 192.0
+offset_right = 296.0
+offset_bottom = 252.0
+script = ExtResource("3_2enu8")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="RootControl/PageHome/Buttons/Start" unique_id=794079010]
+layout_mode = 0
+offset_right = 200.0
+offset_bottom = 60.0
+mouse_filter = 2
+bbcode_enabled = true
+text = "[b][center]START"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Stop" type="Button" parent="RootControl/PageHome/Buttons" unique_id=1916069081]
+layout_mode = 0
+offset_left = 96.0
+offset_top = 268.0
+offset_right = 296.0
+offset_bottom = 328.0
+script = ExtResource("4_3um8p")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="RootControl/PageHome/Buttons/Stop" unique_id=1824585086]
+layout_mode = 0
+offset_right = 200.0
+offset_bottom = 60.0
+mouse_filter = 2
+bbcode_enabled = true
+text = "[b][center]STOP"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LoadConfig" type="Button" parent="RootControl/PageHome/Buttons" unique_id=881534834]
+layout_mode = 0
+offset_left = 96.0
+offset_top = 344.0
+offset_right = 296.0
+offset_bottom = 404.0
+script = ExtResource("5_1lyj7")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="RootControl/PageHome/Buttons/LoadConfig" unique_id=2037622108]
+layout_mode = 0
+offset_right = 200.0
+offset_bottom = 60.0
+mouse_filter = 2
+bbcode_enabled = true
+text = "[b][center]LOAD CONFIG"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TestLovense" type="Button" parent="RootControl/PageHome/Buttons" unique_id=315469848]
+layout_mode = 0
+offset_left = 96.0
+offset_top = 424.0
+offset_right = 296.0
+offset_bottom = 484.0
+script = ExtResource("6_1lyj7")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="RootControl/PageHome/Buttons/TestLovense" unique_id=2075694436]
+layout_mode = 0
+offset_right = 200.0
+offset_bottom = 60.0
+mouse_filter = 2
+bbcode_enabled = true
+text = "[b][center]TEST LOVENSE"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Close" type="Button" parent="RootControl/PageHome/Buttons" unique_id=63385686]
+layout_mode = 0
+offset_left = 96.0
+offset_top = 504.0
+offset_right = 296.0
+offset_bottom = 564.0
+script = ExtResource("7_brcay")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="RootControl/PageHome/Buttons/Close" unique_id=1112602274]
+layout_mode = 0
+offset_right = 200.0
+offset_bottom = 60.0
+mouse_filter = 2
+bbcode_enabled = true
+text = "[b][center]CLOSE"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Console" type="Control" parent="RootControl/PageHome" unique_id=1937549185 node_paths=PackedStringArray("Log")]
+anchors_preset = 0
+offset_left = 396.0
+offset_top = 192.0
+offset_right = 396.0
+offset_bottom = 192.0
+script = ExtResource("6_3um8p")
+Log = NodePath("Log")
+
+[node name="ColorRect" type="ColorRect" parent="RootControl/PageHome/Console" unique_id=1040391398]
+layout_mode = 0
+offset_right = 1408.0
+offset_bottom = 768.0
+color = Color(0, 0, 0, 0.65882355)
+
+[node name="Log" type="RichTextLabel" parent="RootControl/PageHome/Console" unique_id=1355877427]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 32.0
+offset_right = 1376.0
+offset_bottom = 736.0
+bbcode_enabled = true
+
+[node name="PageConfig" type="Control" parent="RootControl" unique_id=1101169432]
+visible = false
+anchors_preset = 0
+
+[node name="TextEdits" type="Control" parent="RootControl/PageConfig" unique_id=1060225504]
+anchors_preset = 0
+
+[node name="SteamDisplayName" type="TextEdit" parent="RootControl/PageConfig/TextEdits" unique_id=1891419180]
+layout_mode = 0
+offset_left = 96.0
+offset_top = 192.0
+offset_right = 416.0
+offset_bottom = 232.0
+placeholder_text = "Steam Display Name"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="RootControl/PageConfig/TextEdits/SteamDisplayName" unique_id=1872739127]
+layout_mode = 0
+offset_top = -28.0
+offset_right = 320.0
+offset_bottom = -4.0
+bbcode_enabled = true
+text = "[b]Steam Display Name"
+scroll_active = false
+
+[node name="LovenseIP" type="TextEdit" parent="RootControl/PageConfig/TextEdits" unique_id=1968595776]
+layout_mode = 0
+offset_left = 96.0
+offset_top = 284.0
+offset_right = 416.0
+offset_bottom = 324.0
+placeholder_text = "Lovense Remote Local IP"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="RootControl/PageConfig/TextEdits/LovenseIP" unique_id=28232064]
+layout_mode = 0
+offset_top = -28.0
+offset_right = 320.0
+offset_bottom = -4.0
+bbcode_enabled = true
+text = "[b]Lovense Remote Local IP"
+scroll_active = false
+
+[node name="LovensePort" type="TextEdit" parent="RootControl/PageConfig/TextEdits" unique_id=1412002247]
+layout_mode = 0
+offset_left = 96.0
+offset_top = 376.0
+offset_right = 416.0
+offset_bottom = 416.0
+placeholder_text = "Lovense Remote Port"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="RootControl/PageConfig/TextEdits/LovensePort" unique_id=1723209926]
+layout_mode = 0
+offset_top = -28.0
+offset_right = 320.0
+offset_bottom = -4.0
+bbcode_enabled = true
+text = "[b]Lovense Port"
+scroll_active = false
+
+[node name="TeamFortressPath" type="TextEdit" parent="RootControl/PageConfig/TextEdits" unique_id=85478235]
+layout_mode = 0
+offset_left = 96.0
+offset_top = 468.0
+offset_right = 416.0
+offset_bottom = 508.0
+placeholder_text = "Team Fortress /tf/ Path"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="RootControl/PageConfig/TextEdits/TeamFortressPath" unique_id=1493999411]
+layout_mode = 0
+offset_top = -28.0
+offset_right = 320.0
+offset_bottom = -4.0
+bbcode_enabled = true
+text = "[b]Team Fortress /tf/ Path"
+scroll_active = false
+
+[node name="Buttons" type="Control" parent="RootControl/PageConfig" unique_id=1644721564]
+anchors_preset = 0
+
+[node name="SetSteamDisplayName" type="Button" parent="RootControl/PageConfig/Buttons" unique_id=1732129815 node_paths=PackedStringArray("TextEditSteamDisplayName")]
+layout_mode = 0
+offset_left = 441.0
+offset_top = 192.0
+offset_right = 561.0
+offset_bottom = 232.0
+script = ExtResource("13_xepxj")
+TextEditSteamDisplayName = NodePath("../../TextEdits/SteamDisplayName")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="RootControl/PageConfig/Buttons/SetSteamDisplayName" unique_id=1762759368]
+layout_mode = 0
+offset_right = 120.0
+offset_bottom = 40.0
+mouse_filter = 2
+bbcode_enabled = true
+text = "[b][center]SET"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SetLovenseLocalIP" type="Button" parent="RootControl/PageConfig/Buttons" unique_id=567627801 node_paths=PackedStringArray("TextEditLovenseLocalIP")]
+layout_mode = 0
+offset_left = 441.0
+offset_top = 284.0
+offset_right = 561.0
+offset_bottom = 324.0
+script = ExtResource("14_lhe6f")
+TextEditLovenseLocalIP = NodePath("../../TextEdits/LovenseIP")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="RootControl/PageConfig/Buttons/SetLovenseLocalIP" unique_id=1298356536]
+layout_mode = 0
+offset_right = 120.0
+offset_bottom = 40.0
+mouse_filter = 2
+bbcode_enabled = true
+text = "[b][center]SET"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SetLovensePort" type="Button" parent="RootControl/PageConfig/Buttons" unique_id=827132810 node_paths=PackedStringArray("TextEditLovensePort")]
+layout_mode = 0
+offset_left = 441.0
+offset_top = 376.0
+offset_right = 561.0
+offset_bottom = 416.0
+script = ExtResource("15_fvku6")
+TextEditLovensePort = NodePath("../../TextEdits/LovensePort")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="RootControl/PageConfig/Buttons/SetLovensePort" unique_id=661358141]
+layout_mode = 0
+offset_right = 120.0
+offset_bottom = 40.0
+mouse_filter = 2
+bbcode_enabled = true
+text = "[b][center]SET"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SetTeamFortressPath" type="Button" parent="RootControl/PageConfig/Buttons" unique_id=1841920115 node_paths=PackedStringArray("TextEditTeamFortress2Path")]
+layout_mode = 0
+offset_left = 441.0
+offset_top = 468.0
+offset_right = 561.0
+offset_bottom = 508.0
+script = ExtResource("16_lhe6f")
+TextEditTeamFortress2Path = NodePath("../../TextEdits/TeamFortressPath")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="RootControl/PageConfig/Buttons/SetTeamFortressPath" unique_id=603441385]
+layout_mode = 0
+offset_right = 120.0
+offset_bottom = 40.0
+mouse_filter = 2
+bbcode_enabled = true
+text = "[b][center]SET"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PageCustomization" type="Control" parent="RootControl" unique_id=1273873203]
+visible = false
+anchors_preset = 0
+
+[node name="TextEdits" type="Control" parent="RootControl/PageCustomization" unique_id=1737482120]
+anchors_preset = 0
+
+[node name="DeathVibrationIntensityCritical" type="TextEdit" parent="RootControl/PageCustomization/TextEdits" unique_id=737677953]
+layout_mode = 0
+offset_left = 96.0
+offset_top = 192.0
+offset_right = 416.0
+offset_bottom = 232.0
+placeholder_text = "Death Vibration Intensity Critical"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="RootControl/PageCustomization/TextEdits/DeathVibrationIntensityCritical" unique_id=738884444]
+layout_mode = 0
+offset_top = -28.0
+offset_right = 320.0
+offset_bottom = -4.0
+bbcode_enabled = true
+text = "[b]Death Vibration Intensity Critical"
+scroll_active = false
+
+[node name="DeathVibrationIntensityNormal" type="TextEdit" parent="RootControl/PageCustomization/TextEdits" unique_id=1448970558]
+layout_mode = 0
+offset_left = 96.0
+offset_top = 284.0
+offset_right = 416.0
+offset_bottom = 324.0
+placeholder_text = "Death Vibration Intensity Normal"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="RootControl/PageCustomization/TextEdits/DeathVibrationIntensityNormal" unique_id=1651208431]
+layout_mode = 0
+offset_top = -28.0
+offset_right = 320.0
+offset_bottom = -4.0
+bbcode_enabled = true
+text = "[b]Death Vibration Intensity Normal"
+scroll_active = false
+
+[node name="EchoVibrationIntensity" type="TextEdit" parent="RootControl/PageCustomization/TextEdits" unique_id=249403369]
+layout_mode = 0
+offset_left = 96.0
+offset_top = 376.0
+offset_right = 416.0
+offset_bottom = 416.0
+placeholder_text = "Echo Vibration Intensity"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="RootControl/PageCustomization/TextEdits/EchoVibrationIntensity" unique_id=1843859511]
+layout_mode = 0
+offset_top = -28.0
+offset_right = 320.0
+offset_bottom = -4.0
+bbcode_enabled = true
+text = "[b]Echo Vibration Intensity"
+scroll_active = false
+
+[node name="EchoVibrationLength" type="TextEdit" parent="RootControl/PageCustomization/TextEdits" unique_id=1060056421]
+layout_mode = 0
+offset_left = 96.0
+offset_top = 468.0
+offset_right = 416.0
+offset_bottom = 508.0
+placeholder_text = "Echo Vibration Length"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="RootControl/PageCustomization/TextEdits/EchoVibrationLength" unique_id=333375417]
+layout_mode = 0
+offset_top = -28.0
+offset_right = 320.0
+offset_bottom = -4.0
+bbcode_enabled = true
+text = "[b]Echo Vibration Length"
+scroll_active = false
+
+[node name="KillStreakVibrationLength0" type="TextEdit" parent="RootControl/PageCustomization/TextEdits" unique_id=1461935657]
+layout_mode = 0
+offset_left = 96.0
+offset_top = 560.0
+offset_right = 416.0
+offset_bottom = 600.0
+placeholder_text = "Kill Streak Vibration Length 0"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="RootControl/PageCustomization/TextEdits/KillStreakVibrationLength0" unique_id=1194528977]
+layout_mode = 0
+offset_top = -28.0
+offset_right = 320.0
+offset_bottom = -4.0
+bbcode_enabled = true
+text = "[b]Kill Streak Vibration Length 0"
+scroll_active = false
+
+[node name="KillStreakVibrationLength5" type="TextEdit" parent="RootControl/PageCustomization/TextEdits" unique_id=1352624977]
+layout_mode = 0
+offset_left = 96.0
+offset_top = 652.0
+offset_right = 416.0
+offset_bottom = 692.0
+placeholder_text = "Kill Streak Vibration Length 5"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="RootControl/PageCustomization/TextEdits/KillStreakVibrationLength5" unique_id=1010017147]
+layout_mode = 0
+offset_top = -28.0
+offset_right = 320.0
+offset_bottom = -4.0
+bbcode_enabled = true
+text = "[b]Kill Streak Vibration Length 5"
+scroll_active = false
+
+[node name="KillStreakVibrationLength10" type="TextEdit" parent="RootControl/PageCustomization/TextEdits" unique_id=1442628206]
+layout_mode = 0
+offset_left = 608.0
+offset_top = 192.0
+offset_right = 928.0
+offset_bottom = 232.0
+placeholder_text = "Kill Streak Vibration Length 10"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="RootControl/PageCustomization/TextEdits/KillStreakVibrationLength10" unique_id=1845151175]
+layout_mode = 0
+offset_top = -28.0
+offset_right = 320.0
+offset_bottom = -4.0
+bbcode_enabled = true
+text = "[b]Kill Streak Vibration Length 10"
+scroll_active = false
+
+[node name="KillStreakVibrationLength15" type="TextEdit" parent="RootControl/PageCustomization/TextEdits" unique_id=2655671]
+layout_mode = 0
+offset_left = 608.0
+offset_top = 284.0
+offset_right = 928.0
+offset_bottom = 324.0
+placeholder_text = "Kill Streak Vibration Length 15"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="RootControl/PageCustomization/TextEdits/KillStreakVibrationLength15" unique_id=414704439]
+layout_mode = 0
+offset_top = -28.0
+offset_right = 320.0
+offset_bottom = -4.0
+bbcode_enabled = true
+text = "[b]Kill Streak Vibration Length 15"
+scroll_active = false
+
+[node name="KillStreakVibrationLength20" type="TextEdit" parent="RootControl/PageCustomization/TextEdits" unique_id=1269874877]
+layout_mode = 0
+offset_left = 608.0
+offset_top = 376.0
+offset_right = 928.0
+offset_bottom = 416.0
+placeholder_text = "Kill Streak Vibration Length 20"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="RootControl/PageCustomization/TextEdits/KillStreakVibrationLength20" unique_id=1086178212]
+layout_mode = 0
+offset_top = -28.0
+offset_right = 320.0
+offset_bottom = -4.0
+bbcode_enabled = true
+text = "[b]Kill Streak Vibration Length 20"
+scroll_active = false
+
+[node name="KillStreakVibrationLength25" type="TextEdit" parent="RootControl/PageCustomization/TextEdits" unique_id=1611534226]
+layout_mode = 0
+offset_left = 608.0
+offset_top = 468.0
+offset_right = 928.0
+offset_bottom = 508.0
+placeholder_text = "Kill Streak Vibration Length 25"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="RootControl/PageCustomization/TextEdits/KillStreakVibrationLength25" unique_id=1901992301]
+layout_mode = 0
+offset_top = -28.0
+offset_right = 320.0
+offset_bottom = -4.0
+bbcode_enabled = true
+text = "[b]Kill Streak Vibration Length 25"
+scroll_active = false
+
+[node name="KillVibrationIntensityCritical" type="TextEdit" parent="RootControl/PageCustomization/TextEdits" unique_id=2084932744]
+layout_mode = 0
+offset_left = 608.0
+offset_top = 560.0
+offset_right = 928.0
+offset_bottom = 600.0
+placeholder_text = "Kill Vibration Intensity Critical"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="RootControl/PageCustomization/TextEdits/KillVibrationIntensityCritical" unique_id=122613085]
+layout_mode = 0
+offset_top = -28.0
+offset_right = 320.0
+offset_bottom = -4.0
+bbcode_enabled = true
+text = "[b]Kill Vibration Intensity Critical"
+scroll_active = false
+
+[node name="KillVibrationIntensityNormal" type="TextEdit" parent="RootControl/PageCustomization/TextEdits" unique_id=1782323654]
+layout_mode = 0
+offset_left = 608.0
+offset_top = 652.0
+offset_right = 928.0
+offset_bottom = 692.0
+placeholder_text = "Kill Vibration Intensity Normal"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="RootControl/PageCustomization/TextEdits/KillVibrationIntensityNormal" unique_id=1837911827]
+layout_mode = 0
+offset_top = -28.0
+offset_right = 320.0
+offset_bottom = -4.0
+bbcode_enabled = true
+text = "[b]Kill Vibration Intensity Normal"
+scroll_active = false
+
+[node name="SuicideVibrationIntensity" type="TextEdit" parent="RootControl/PageCustomization/TextEdits" unique_id=13897275]
+layout_mode = 0
+offset_left = 1120.0
+offset_top = 192.0
+offset_right = 1440.0
+offset_bottom = 232.0
+placeholder_text = "Suicide Vibration Intensity"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="RootControl/PageCustomization/TextEdits/SuicideVibrationIntensity" unique_id=110016738]
+layout_mode = 0
+offset_top = -28.0
+offset_right = 320.0
+offset_bottom = -4.0
+bbcode_enabled = true
+text = "[b]Suicide Vibration Intensity"
+scroll_active = false
+
+[node name="Buttons" type="Control" parent="RootControl/PageCustomization" unique_id=1840548291]
+anchors_preset = 0
+
+[node name="SetDeathVibrationIntensityCritical" type="Button" parent="RootControl/PageCustomization/Buttons" unique_id=327333180 node_paths=PackedStringArray("TextEditDeathVibrationIntensityCritical")]
+layout_mode = 0
+offset_left = 441.0
+offset_top = 192.0
+offset_right = 561.0
+offset_bottom = 232.0
+script = ExtResource("17_2gewe")
+TextEditDeathVibrationIntensityCritical = NodePath("../../TextEdits/DeathVibrationIntensityCritical")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="RootControl/PageCustomization/Buttons/SetDeathVibrationIntensityCritical" unique_id=1014617309]
+layout_mode = 0
+offset_right = 120.0
+offset_bottom = 40.0
+mouse_filter = 2
+bbcode_enabled = true
+text = "[b][center]SET"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SetDeathVibrationIntensityNormal" type="Button" parent="RootControl/PageCustomization/Buttons" unique_id=1839700560 node_paths=PackedStringArray("TextEditDeathVibrationIntensityNormal")]
+layout_mode = 0
+offset_left = 441.0
+offset_top = 284.0
+offset_right = 561.0
+offset_bottom = 324.0
+script = ExtResource("18_syr4n")
+TextEditDeathVibrationIntensityNormal = NodePath("../../TextEdits/DeathVibrationIntensityNormal")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="RootControl/PageCustomization/Buttons/SetDeathVibrationIntensityNormal" unique_id=1987635262]
+layout_mode = 0
+offset_right = 120.0
+offset_bottom = 40.0
+mouse_filter = 2
+bbcode_enabled = true
+text = "[b][center]SET"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SetEchoVibrationIntensity" type="Button" parent="RootControl/PageCustomization/Buttons" unique_id=25108636 node_paths=PackedStringArray("TextEditEchoVibrationIntensity")]
+layout_mode = 0
+offset_left = 441.0
+offset_top = 376.0
+offset_right = 561.0
+offset_bottom = 416.0
+script = ExtResource("19_5x875")
+TextEditEchoVibrationIntensity = NodePath("../../TextEdits/EchoVibrationIntensity")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="RootControl/PageCustomization/Buttons/SetEchoVibrationIntensity" unique_id=954933630]
+layout_mode = 0
+offset_right = 120.0
+offset_bottom = 40.0
+mouse_filter = 2
+bbcode_enabled = true
+text = "[b][center]SET"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SetEchoVibrationLength" type="Button" parent="RootControl/PageCustomization/Buttons" unique_id=1863363470 node_paths=PackedStringArray("TextEditEchoVibrationLength")]
+layout_mode = 0
+offset_left = 441.0
+offset_top = 468.0
+offset_right = 561.0
+offset_bottom = 508.0
+script = ExtResource("20_2xh08")
+TextEditEchoVibrationLength = NodePath("../../TextEdits/EchoVibrationLength")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="RootControl/PageCustomization/Buttons/SetEchoVibrationLength" unique_id=1836796020]
+layout_mode = 0
+offset_right = 120.0
+offset_bottom = 40.0
+mouse_filter = 2
+bbcode_enabled = true
+text = "[b][center]SET"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SetKillStreakVibrationLength0" type="Button" parent="RootControl/PageCustomization/Buttons" unique_id=1979939292 node_paths=PackedStringArray("TextEditKillStreakVibrationLength0")]
+layout_mode = 0
+offset_left = 441.0
+offset_top = 560.0
+offset_right = 561.0
+offset_bottom = 600.0
+script = ExtResource("21_0b5xl")
+TextEditKillStreakVibrationLength0 = NodePath("../../TextEdits/KillStreakVibrationLength0")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="RootControl/PageCustomization/Buttons/SetKillStreakVibrationLength0" unique_id=910455955]
+layout_mode = 0
+offset_right = 120.0
+offset_bottom = 40.0
+mouse_filter = 2
+bbcode_enabled = true
+text = "[b][center]SET"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SetKillStreakVibrationLength5" type="Button" parent="RootControl/PageCustomization/Buttons" unique_id=222445891 node_paths=PackedStringArray("TextEditKillStreakVibrationLength5")]
+layout_mode = 0
+offset_left = 441.0
+offset_top = 652.0
+offset_right = 561.0
+offset_bottom = 692.0
+script = ExtResource("22_qm20r")
+TextEditKillStreakVibrationLength5 = NodePath("../../TextEdits/KillStreakVibrationLength5")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="RootControl/PageCustomization/Buttons/SetKillStreakVibrationLength5" unique_id=1909237313]
+layout_mode = 0
+offset_right = 120.0
+offset_bottom = 40.0
+mouse_filter = 2
+bbcode_enabled = true
+text = "[b][center]SET"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SetKillStreakVibrationLength10" type="Button" parent="RootControl/PageCustomization/Buttons" unique_id=1331352143 node_paths=PackedStringArray("TextEditKillStreakVibrationLength10")]
+layout_mode = 0
+offset_left = 953.0
+offset_top = 192.0
+offset_right = 1073.0
+offset_bottom = 232.0
+script = ExtResource("23_mi0f7")
+TextEditKillStreakVibrationLength10 = NodePath("../../TextEdits/KillStreakVibrationLength10")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="RootControl/PageCustomization/Buttons/SetKillStreakVibrationLength10" unique_id=1577136697]
+layout_mode = 0
+offset_right = 120.0
+offset_bottom = 40.0
+mouse_filter = 2
+bbcode_enabled = true
+text = "[b][center]SET"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SetKillStreakVibrationLength15" type="Button" parent="RootControl/PageCustomization/Buttons" unique_id=1358682066 node_paths=PackedStringArray("TextEditKillStreakVibrationLength15")]
+layout_mode = 0
+offset_left = 953.0
+offset_top = 284.0
+offset_right = 1073.0
+offset_bottom = 324.0
+script = ExtResource("24_f2fsi")
+TextEditKillStreakVibrationLength15 = NodePath("../../TextEdits/KillStreakVibrationLength15")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="RootControl/PageCustomization/Buttons/SetKillStreakVibrationLength15" unique_id=1103980708]
+layout_mode = 0
+offset_right = 120.0
+offset_bottom = 40.0
+mouse_filter = 2
+bbcode_enabled = true
+text = "[b][center]SET"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SetKillStreakVibrationLength20" type="Button" parent="RootControl/PageCustomization/Buttons" unique_id=1352810140 node_paths=PackedStringArray("TextEditKillStreakVibrationLength20")]
+layout_mode = 0
+offset_left = 953.0
+offset_top = 376.0
+offset_right = 1073.0
+offset_bottom = 416.0
+script = ExtResource("25_v74uj")
+TextEditKillStreakVibrationLength20 = NodePath("../../TextEdits/KillStreakVibrationLength20")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="RootControl/PageCustomization/Buttons/SetKillStreakVibrationLength20" unique_id=1754282602]
+layout_mode = 0
+offset_right = 120.0
+offset_bottom = 40.0
+mouse_filter = 2
+bbcode_enabled = true
+text = "[b][center]SET"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SetKillStreakVibrationLength25" type="Button" parent="RootControl/PageCustomization/Buttons" unique_id=779184257 node_paths=PackedStringArray("TextEditKillStreakVibrationLength25")]
+layout_mode = 0
+offset_left = 953.0
+offset_top = 468.0
+offset_right = 1073.0
+offset_bottom = 508.0
+script = ExtResource("26_3gobe")
+TextEditKillStreakVibrationLength25 = NodePath("../../TextEdits/KillStreakVibrationLength25")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="RootControl/PageCustomization/Buttons/SetKillStreakVibrationLength25" unique_id=733210470]
+layout_mode = 0
+offset_right = 120.0
+offset_bottom = 40.0
+mouse_filter = 2
+bbcode_enabled = true
+text = "[b][center]SET"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SetKillVibrationIntensityCritical" type="Button" parent="RootControl/PageCustomization/Buttons" unique_id=371892907 node_paths=PackedStringArray("TextEditKillVibrationIntensityCritical")]
+layout_mode = 0
+offset_left = 953.0
+offset_top = 560.0
+offset_right = 1073.0
+offset_bottom = 600.0
+script = ExtResource("27_tfyti")
+TextEditKillVibrationIntensityCritical = NodePath("../../TextEdits/KillVibrationIntensityCritical")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="RootControl/PageCustomization/Buttons/SetKillVibrationIntensityCritical" unique_id=1035451604]
+layout_mode = 0
+offset_right = 120.0
+offset_bottom = 40.0
+mouse_filter = 2
+bbcode_enabled = true
+text = "[b][center]SET"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SetKillVibrationIntensityNormal" type="Button" parent="RootControl/PageCustomization/Buttons" unique_id=1236382407 node_paths=PackedStringArray("TextEditKillVibrationIntensityNormal")]
+layout_mode = 0
+offset_left = 953.0
+offset_top = 652.0
+offset_right = 1073.0
+offset_bottom = 692.0
+script = ExtResource("28_64mo1")
+TextEditKillVibrationIntensityNormal = NodePath("../../TextEdits/KillVibrationIntensityNormal")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="RootControl/PageCustomization/Buttons/SetKillVibrationIntensityNormal" unique_id=1781347824]
+layout_mode = 0
+offset_right = 120.0
+offset_bottom = 40.0
+mouse_filter = 2
+bbcode_enabled = true
+text = "[b][center]SET"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SetSuicideVibrationIntensity" type="Button" parent="RootControl/PageCustomization/Buttons" unique_id=74793320 node_paths=PackedStringArray("TextEditSuicideVibrationIntensity")]
+layout_mode = 0
+offset_left = 1465.0
+offset_top = 192.0
+offset_right = 1585.0
+offset_bottom = 232.0
+script = ExtResource("29_00c1p")
+TextEditSuicideVibrationIntensity = NodePath("../../TextEdits/SuicideVibrationIntensity")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="RootControl/PageCustomization/Buttons/SetSuicideVibrationIntensity" unique_id=783845507]
+layout_mode = 0
+offset_right = 120.0
+offset_bottom = 40.0
+mouse_filter = 2
+bbcode_enabled = true
+text = "[b][center]SET"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Reset" type="Button" parent="RootControl/PageCustomization/Buttons" unique_id=2107103430 node_paths=PackedStringArray("ButtonDeathVibrationIntensityCritical", "ButtonDeathVibrationIntensityNormal", "ButtonEchoVibrationIntensity", "ButtonEchoVibrationLength", "ButtonKillStreakVibrationLength0", "ButtonKillStreakVibrationLength5", "ButtonKillStreakVibrationLength10", "ButtonKillStreakVibrationLength15", "ButtonKillStreakVibrationLength20", "ButtonKillStreakVibrationLength25", "ButtonKillVibrationIntensityCritical", "ButtonKillVibrationIntensityNormal", "ButtonSuicideVibrationIntensity")]
+layout_mode = 0
+offset_left = 1120.0
+offset_top = 280.0
+offset_right = 1240.0
+offset_bottom = 320.0
+script = ExtResource("30_syr4n")
+ButtonDeathVibrationIntensityCritical = NodePath("../SetDeathVibrationIntensityCritical")
+ButtonDeathVibrationIntensityNormal = NodePath("../SetDeathVibrationIntensityNormal")
+ButtonEchoVibrationIntensity = NodePath("../SetEchoVibrationIntensity")
+ButtonEchoVibrationLength = NodePath("../SetEchoVibrationLength")
+ButtonKillStreakVibrationLength0 = NodePath("../SetKillStreakVibrationLength0")
+ButtonKillStreakVibrationLength5 = NodePath("../SetKillStreakVibrationLength5")
+ButtonKillStreakVibrationLength10 = NodePath("../SetKillStreakVibrationLength10")
+ButtonKillStreakVibrationLength15 = NodePath("../SetKillStreakVibrationLength15")
+ButtonKillStreakVibrationLength20 = NodePath("../SetKillStreakVibrationLength20")
+ButtonKillStreakVibrationLength25 = NodePath("../SetKillStreakVibrationLength25")
+ButtonKillVibrationIntensityCritical = NodePath("../SetKillVibrationIntensityCritical")
+ButtonKillVibrationIntensityNormal = NodePath("../SetKillVibrationIntensityNormal")
+ButtonSuicideVibrationIntensity = NodePath("../SetSuicideVibrationIntensity")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="RootControl/PageCustomization/Buttons/Reset" unique_id=1676241497]
+layout_mode = 0
+offset_right = 120.0
+offset_bottom = 40.0
+mouse_filter = 2
+bbcode_enabled = true
+text = "[b][center]RESET"
+horizontal_alignment = 1
+vertical_alignment = 1
