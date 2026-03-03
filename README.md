@@ -40,8 +40,7 @@ The Lovense Remote app can be set up by:
 3. Open the **Discover** tab on the bottom of the app.
 4. Scroll down & select **Game Mode**.
 5. Toggle the **Enable LAN** button to on.
-6. Copy the **Local IP** to the LovenseFortress app in the Config tab & press **Set**.
-7. Copy the **Port** to the Lovense Fortress app in the Config tab & press **Set**.
+6. Copy the **Local IP** & **Port** found in the Lovense Remote app to the LovenseFortress app in the Config tab & press **Set** for both the **Lovense Local IP** & **Lovense Port**.
 
 **It is recommended to set your mobile device to use a static IP to prevent having to update your local ip that the Lovense Remote app will be showing. Instructions for setting a static IP on your mobile device can be found online.**
 
