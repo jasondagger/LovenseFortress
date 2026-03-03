@@ -72,8 +72,9 @@ Type the following in the Team Fortress 2 developer console:
 - For example, **bind o kill**
 
 Enable the Team Fortress 2 developer console by the following:
-1. Open **Options**.
-2. Select **Advanced...**
-3. Check the **Enable developer console** box.
-4. Hit the **~** key to open the developer console.
-5. Enter the above commands.
+1. Launch **Team Fortress 2**.
+2. Select **Options** on the main menu.
+3. Select the **Advanced...** button.
+4. Check the **Enable developer console** box.
+5. Hit the **~** key to open the developer console.
+6. Enter the above commands.
